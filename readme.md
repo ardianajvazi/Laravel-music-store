@@ -1,6 +1,8 @@
 ## To run application locally run these commands
-`create a empty database called "music-store"` (or something of your choice)
-`create a .env file in the root of the project` (use the .env.example in the root as a reference)
+```
+create a empty database called "music-store" (or something of your choice)
+create a .env file in the root of the project (use the .env.example in the root as a reference)
+```
 
 ```
 php composer.phar update
@@ -8,7 +10,6 @@ php artisan migrate
 php artisan db:seed
 php artisan serve
 open localhost:8000
-
 ```
 
 ## About Laravel
