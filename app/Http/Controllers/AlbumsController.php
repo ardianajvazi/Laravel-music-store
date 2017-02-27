@@ -44,6 +44,8 @@ class AlbumsController extends Controller
             $albums = $this->getAlbumsSortedByBand($band_name);
         }
 
+        $albums = json_decode($albums,true);
+
         return $albums;
     }
 
@@ -117,7 +119,9 @@ class AlbumsController extends Controller
         {
             $album = new Album();
 
-            $albums = $album -> where('band_id',$band->id) -> get();
+            $albums = $album-> with(array('band'=>function($query){
+                $query->select('id','name');
+            })) -> where('band_id',$band->id) -> get();
         }else{
             $albums = array();
         }
@@ -188,5 +192,5 @@ class AlbumsController extends Controller
 
         $album->delete();
 
-}
+    }
 }
