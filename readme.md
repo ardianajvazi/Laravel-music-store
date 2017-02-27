@@ -1,5 +1,7 @@
 ## To run application locally run these commands
 ```
+git clone https://github.com/ardianajvazi/Laravel-music-store.git
+cd Laravel-music-store
 create a empty database called "music-store" (or something of your choice)
 create a .env file in the root of the project (use the .env.example in the root as a reference)
 ```
