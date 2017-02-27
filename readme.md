@@ -5,10 +5,10 @@ create a .env file in the root of the project (use the .env.example in the root 
 ```
 
 ```
-php composer.phar update
-php artisan migrate
-php artisan db:seed
-php artisan serve
+- php composer.phar update
+- php artisan migrate
+- php artisan db:seed
+- php artisan serve
 open localhost:8000
 ```
 
